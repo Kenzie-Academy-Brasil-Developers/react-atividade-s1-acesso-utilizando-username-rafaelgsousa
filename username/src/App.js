@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import {useState} from "react"
@@ -9,17 +8,17 @@ import GetUserComponent from './componentes/GetUserComponent';
 
 function App() {
 
-  const [isLoggedIn,setIsLoggedIn] = useState(true)
+  const [isLoggedIn,setIsLoggedIn] = useState(false)
 
-  const [isList,setIsList]= useState([])
-
+  const [user,setUser] = useState("")
+  console.log(user)
   return (
     <div className="App">
       <header className="App-header">
-        {isLoggedIn?
-        <WelcomePage setIsLoggedIn={true} user={"Rafael"}/>
+        {isLoggedIn? 
+        (<WelcomePage setIsLoggedIn={setIsLoggedIn} user={user}/>)
         :
-        <GetUserComponent setIsLoggedIn={setIsLoggedIn} setUser={isList}/>
+        (<GetUserComponent setIsLoggedIn={setIsLoggedIn} setUser={setUser}/>)
         } 
       </header>
     </div>

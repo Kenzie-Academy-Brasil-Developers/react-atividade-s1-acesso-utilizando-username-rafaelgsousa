@@ -1,0 +1,19 @@
+input {
+    display: block;
+    padding: 5px 10px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 2px;
+    border: none transparent;
+}
+input:focus {
+    background-color: #FBF37C;
+    border: none;
+}
+
+input:active {
+    border: none;
+}
+p {
+    height: 30px;
+}
